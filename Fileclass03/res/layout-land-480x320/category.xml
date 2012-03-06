@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/linelayout"
+    >
+    
+    <Button
+    android:id="@+id/createclass"
+    android:layout_width="40dip"
+    android:layout_height="40dip"
+    android:layout_marginLeft="50px"
+    android:layout_marginTop="280px"
+  >
+    </Button>
+
+    <Button
+    android:id="@+id/editclass"
+    android:layout_width="38dip"
+    android:layout_height="38dip"
+    android:layout_marginLeft="430px"
+    android:layout_marginTop="10px"
+  >
+    </Button>
+    <Button
+        android:id="@+id/configclassbutton"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignBaseline="@+id/doneclass"
+        android:layout_alignBottom="@+id/doneclass"
+        android:layout_alignRight="@+id/editclass"
+        android:layout_marginRight="42dp" />
+<LinearLayout
+	android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:layout_marginTop="220px">
+    <TextView  
+	android:id="@+id/textviewclassname"
+	android:textColor="#ffcc00"
+    android:layout_width="40dip" 
+    android:layout_height="wrap_content" 
+    android:text="@string/classname"
+    android:textSize="16sp"
+    android:layout_marginLeft="80px"
+    >
+    </TextView>
+    <EditText
+  android:id="@+id/classname"
+  android:text="" 
+  android:layout_width="140dip"   
+  android:layout_height="50px"   
+  android:inputType="text|textNoSuggestions"   
+  android:textSize="20sp"
+  android:layout_marginLeft="0px"
+  >
+  </EditText> 
+    <TextView  
+	android:id="@+id/textviewbackground"
+	android:textColor="#ffcc00"
+    android:layout_width="40dip" 
+    android:layout_height="wrap_content" 
+    android:text="@string/background"
+    android:textSize="16sp"
+    android:layout_marginLeft="20px"
+    >
+    </TextView>
+   <Spinner
+     android:id="@+id/spinner"
+     android:layout_width="90dip"
+    android:layout_height="40dip"
+    android:layout_marginLeft="-5px"
+    android:layout_marginTop="5px"
+     >
+   </Spinner>
+    
+    
+</LinearLayout>
+
+<Button
+    android:id="@+id/doneclass"
+    android:layout_width="40dip"
+    android:layout_height="40dip"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true" />
+  
+</RelativeLayout>

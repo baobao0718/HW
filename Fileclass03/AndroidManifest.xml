@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.study.android.HWtrying"
+      android:versionCode="1"
+      android:versionName="1.0">
+
+    <application android:icon="@drawable/logo"  android:label="@string/app_name">
+        <activity android:name=".HWtrying"
+           		  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+           		  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+                  >
+        </activity>
+        <activity android:name=".WritebySurfaceView"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				  android:configChanges="orientation|keyboardHidden|navigation"
+           		  android:screenOrientation="sensor"
+           		  >
+        </activity>
+         <activity android:name=".Save"
+                  android:label="@string/app_name"
+                   android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+           		  >
+        </activity>
+   
+        <activity android:name=".Mailretry"
+                  android:label="@string/app_name"
+                  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="portrait"
+           		  >
+        </activity>
+        
+        <activity android:name="com.study.android.Category.Fileclass"
+                  android:launchMode="singleTask"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				  android:configChanges="orientation|keyboardHidden|navigation"
+                  android:screenOrientation="portrait"
+                  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.study.android.retrieval.ShowRetrieve"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				  android:configChanges="orientation|keyboardHidden|navigation"
+                  android:screenOrientation="sensor">
+        </activity>
+        
+        <activity android:name="com.study.android.HWtrying.ExportFile"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+				  android:configChanges="orientation|keyboardHidden|navigation"
+                  android:screenOrientation="sensor">
+        </activity>
+        
+        <activity android:name="com.study.android.configure.Configure"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden|navigation"
+           		  android:screenOrientation="sensor"
+           		  >
+        </activity>
+        
+        <activity android:name="com.study.android.help.Help"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+           		  >
+        </activity>
+        
+        <activity android:name="com.study.android.help.QuickStart"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+           		  >
+        </activity>
+        
+        <activity android:name="com.study.android.help.FunctionDetail"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+           		  >
+        </activity>
+        
+        <activity android:name="com.study.android.help.EditFunction"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+           		  >
+        </activity>
+        
+            <activity android:name="com.study.android.configure.SystemAbout"
+                  android:theme="@style/Transparent"
+                  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+           		  >
+        </activity>
+        
+        <activity android:name="com.study.android.configure.InputformatConfigure"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+           		  >
+         </activity>
+         
+         <activity android:name="com.study.android.configure.InputCharacterConfigure"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+           		  >
+         </activity>
+         
+          <activity android:name="com.study.android.configure.InputBgColorConfigure"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation|keyboardHidden"
+           		  android:screenOrientation="sensor"
+           		  >
+         </activity>
+         
+         <activity android:name="com.mobcent.share.android.activity.MCShareAppActivity"
+android:screenOrientation="portrait"/>
+<activity android:name="com.mobcent.share.android.activity.MCShareBindSitesActivity"
+android:screenOrientation="portrait"/>
+<activity android:name="com.mobcent.share.android.activity.MCShareMoreInfoActivity"
+android:screenOrientation="portrait"/>
+
+
+         <activity
+android:name="com.mobcent.lib.android.ui.activity.MCLibCommunityBundleActivity"
+android:screenOrientation="portrait" />
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibEventBundleActivity"
+android:screenOrientation="portrait" />
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibUserBundleActivity"
+android:windowSoftInputMode="adjustUnspecified|stateAlwaysHidden"
+android:configChanges="orientation|keyboardHidden"
+android:screenOrientation="portrait" />
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibPublishStatusActivity"
+android:screenOrientation="portrait" android:configChanges="orientation" />
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibUserSettingActivity"
+android:screenOrientation="portrait" android:configChanges="orientation" />
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibGuideBasicActivity"
+android:screenOrientation="portrait"/>
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibGuidePwdActivity"
+android:screenOrientation="portrait"/>
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibGuideSyncActivity"
+android:screenOrientation="portrait"/>
+<activity
+android:name="com.mobcent.lib.android.ui.activity.MCLibDownloadManagerActivity"
+android:screenOrientation="portrait" />
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibStatusRepliesActivity"
+android:screenOrientation="portrait"/>
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibUserHomeActivity"
+android:screenOrientation="portrait"/>
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibChatRoomActivity"
+android:windowSoftInputMode="adjustUnspecified|stateAlwaysHidden"
+android:configChanges="orientation|keyboardHidden"
+android:screenOrientation="portrait"/>
+<activity
+android:name="com.mobcent.lib.android.ui.activity.MCLibChatSessionListActivity"
+android:screenOrientation="portrait" />
+<activity android:name="com.mobcent.lib.android.ui.activity.MCLibBlackListActivity"
+android:screenOrientation="portrait" />
+<activity android:name="com.mobcent.share.android.activity.MCShareAppActivity"
+android:screenOrientation="portrait"/>
+<activity android:name="com.mobcent.share.android.activity.MCShareBindSitesActivity"
+android:screenOrientation="portrait"/>
+<activity android:name="com.mobcent.share.android.activity.MCShareMoreInfoActivity"
+android:screenOrientation="portrait"/>
+<service
+android:name="com.mobcent.android.os.service.MCLibDownloadMonitorService"
+android:enabled="true"/>
+<service
+android:name="com.mobcent.android.os.service.MCLibUserPublishQueueService"
+android:enabled="true"/>
+<service android:name="com.mobcent.android.os.service.MCLibHeartBeatOSService"
+android:enabled="true"/>
+<service
+android:name="com.mobcent.android.os.service.MCLibCheckProductUpdateService"
+android:enabled="true"/>
+    </application>
+    <uses-sdk android:minSdkVersion="7" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+<uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.VIBRATE" />
+
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+<supports-screens android:smallScreens="true" android:normalScreens="true"
+android:largeScreens="true" android:anyDensity="true" />
+</manifest> 

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:background="@drawable/portkviewbackground"
+    >
+
+  <!-- --><com.study.android.HWtrying.Mview
+   android:id="@+id/mviewid"
+   android:layout_width="fill_parent" 
+   android:layout_height="wrap_content" 
+   />
+   
+   <com.study.android.HWtrying.Kview
+   android:id="@+id/kviewid"
+   android:layout_width="fill_parent" 
+   android:layout_height="wrap_content"
+   /> 
+   
+   <TableLayout 
+     android:id="@+id/emailtablelayout"
+     android:layout_width="480px"
+     android:layout_height="66px"
+     android:background="#00000000"
+     >
+     
+  	<TableRow>
+  
+    <Button 
+    android:id = "@+id/exportbutton"
+    android:background ="@drawable/export"
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="410px"
+    android:layout_marginTop = "10px"
+    />
+     
+    </TableRow>
+ 	</TableLayout>
+
+
+   <LinearLayout android:id="@+id/AbsoluteLayout01" 
+   		android:layout_width="wrap_content" 
+   		android:layout_height="wrap_content"
+   		android:background="#00000000"
+   		>
+   <Button 
+    android:id="@+id/button"
+    android:background="#00000000"
+    android:textColor="#ff5500"
+    android:layout_width="70px" 
+    android:layout_height="40px" 
+    android:text="完成"
+    android:textSize="18dip"
+    android:layout_marginTop="80px"
+    android:layout_marginLeft="360px"
+    /> 
+    </LinearLayout>
+    <TextView
+	    android:id="@+id/tipsid" 
+	    android:textColor="#ff5500"
+	    android:text="请输入标题，按完成结束。"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone"
+	    android:layout_marginTop="120px"
+    	android:layout_marginLeft="70px">	    
+	</TextView>
+
+   <RelativeLayout android:id="@+id/AbsoluteLayout002" 
+   	android:layout_width="480px" 
+   	android:layout_height="800px"
+   	android:background="#00000000"
+   >
+   
+ 	<RelativeLayout android:id="@+id/AbsoluteLayout000" 
+   		android:layout_width="480px" 
+   		android:layout_height="80px"
+   		android:layout_marginTop="725px"
+   		android:background = "#00000000"
+   		>  
+   	</RelativeLayout>
+   	
+     <LinearLayout android:id="@+id/AbsoluteLayout02" 
+   	android:layout_width="480px" 
+   	android:layout_height="800px"
+   	android:background="#00000000"
+   >
+
+    <Button 
+    android:id="@+id/textid"
+    android:background="@drawable/bi"				
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="740px"
+    android:layout_marginLeft="2px"
+    
+    />
+    
+    <Button 
+    android:id="@+id/graphid"
+    android:background="@drawable/huatu"			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="740px"
+    android:layout_marginLeft="5px"
+    android:visibility="gone"
+    />
+    
+    <Button 
+    android:id="@+id/editid"
+    android:background="@drawable/bianji"			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="740px"
+    android:layout_marginLeft="5px"
+    />
+     
+    <Button 
+    android:id="@+id/spaceid"
+    android:background="@drawable/kongge"			
+    android:layout_width="70px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="740px"
+    android:layout_marginLeft="8px"
+    />
+    
+    <Button 
+    android:id="@+id/enterid"
+    android:background="@drawable/huiche"			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="740px"
+    android:layout_marginLeft="8px"
+    android:visibility="gone"
+    />
+    
+     
+    <Button 
+    android:id="@+id/backspaceid"
+    android:background="@drawable/huitui"			
+    android:layout_width="50px" 
+    android:layout_height="65px" 
+    android:layout_marginTop="740px"
+    android:layout_marginLeft="8px"
+    />
+
+	</LinearLayout> 
+     
+    
+     
+     <LinearLayout android:id="@+id/AbsoluteLayout00" 
+   		android:layout_width="wrap_content" 
+   		android:layout_height="wrap_content"
+   		android:background="#00000000"
+   		>  
+    <Button 
+    android:id="@+id/doneid"
+    android:background="@drawable/done"			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="745px"
+    android:layout_marginLeft="375px"
+  
+    
+    />
+    
+    <Button 
+    android:id="@+id/autospace"
+    android:background="@drawable/spacectrl"			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="745px"
+    android:layout_marginLeft="5px"
+   
+    />
+    
+   
+
+    </LinearLayout>   
+    
+   	</RelativeLayout> 
+  
+  
+  
+  
+     <RelativeLayout android:id="@+id/AbsoluteLayout003" 
+   	android:layout_width="480px" 
+   	android:layout_height="800px"
+   	android:background="#00000000"
+   >
+    
+    	<RelativeLayout android:id="@+id/AbsoluteLayout001" 
+   		android:layout_width="60px" 
+   		android:layout_height="600px"
+   		android:layout_marginTop="20px"
+   		android:layout_marginLeft="420px"
+   		android:background="#00000000"
+   		>  
+   		</RelativeLayout>
+    
+   <!-- android:visibility="invisible" -->
+    <LinearLayout android:id="@+id/AbsoluteLayout03" 
+   		android:layout_width="100px" 
+   		android:layout_height="320dip"
+   		android:layout_marginTop="80px"
+   		android:layout_marginLeft="410px"
+   		android:orientation="vertical"
+   		android:background="#00000000"
+   		>  
+    <Button 
+    android:id="@+id/backtodraw"
+    android:background="@drawable/huihua"			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="10px"
+    android:visibility="invisible"
+    />  
+    <!--  -->
+     <Button 
+    android:id="@+id/eraserid"
+    android:background="@drawable/eraser"		
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="10px"
+    android:visibility="invisible"
+    />
+    
+    <Button 
+    android:id="@+id/innertextid"
+    android:background="@drawable/wenzi"		
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="10px"
+    android:visibility="invisible"
+    />
+    <Button 
+    android:id="@+id/colorofimagepaint"
+    android:background="@drawable/yanse"			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="10px"
+    android:visibility="invisible"
+    />    
+     <!--  android:visibility="gone" -->
+    <TextView 
+    android:id="@+id/paintstrokesizetext"			
+    android:layout_width="60px" 
+    android:layout_height="60px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="10px"
+    android:visibility="gone"
+    android:text="粗细"
+    android:textColor="#ffff00"
+    android:textSize="14dip"
+    /> 
+    
+     <TextView
+    android:id="@+id/innertextsizetext"		
+    android:layout_width="70px" 
+    android:layout_height="60px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="-5px"
+    android:visibility="gone"
+    android:textColor="#ffff00"
+    android:text="字大小"
+    android:textSize="14dip"
+    /> 
+    
+      </LinearLayout>
+      
+      
+     </RelativeLayout >
+     
+     
+      
+    <RelativeLayout android:id="@+id/AbsoluteLayout04" 
+   		android:layout_width="wrap_content" 
+   		android:layout_height="800dip"
+   		android:background="#00000000"
+   		>  
+   		
+   	<!-- SeekBar01 为画笔粗细的垂直滚动条 -->
+    <com.study.android.VerticalSeekbar.VerticalSeekBar
+	android:id="@+id/SeekBar01"
+    android:progressDrawable="@drawable/progress_vertical"
+    android:thumb="@drawable/seek_thumb"
+    android:max="100"
+    android:progress="40"
+    android:layout_height="160px" 
+    android:layout_width="40px"
+ 	android:layout_marginTop="390px"
+    android:layout_marginLeft="425px"
+    android:visibility="gone"/> 
+    
+    <!-- SeekBar02 为内嵌字的垂直滚动条 -->
+    <com.study.android.VerticalSeekbar.VerticalSeekBar
+	android:id="@+id/SeekBar02"
+    android:progressDrawable="@drawable/progress_vertical"
+    android:thumb="@drawable/seek_thumb"
+    android:max="100"
+    android:progress="40"
+    android:layout_height="160px" 
+    android:layout_width="40px"
+ 	android:layout_marginTop="390px"
+    android:layout_marginLeft="425px"
+    android:visibility="gone"/> 
+ 
+   		<Button 
+    	android:id="@+id/largeeraser"
+    	android:background="@drawable/largeeraser"		
+    	android:layout_width="40px" 
+    	android:layout_height="40px" 
+    	android:layout_marginTop="340px"
+    	android:layout_marginLeft="423px"
+    	android:visibility="gone"
+    	/>
+    	<Button 
+    	android:id="@+id/middleeraser"
+    	android:background="@drawable/middleeraser"		
+    	android:layout_width="40px" 
+    	android:layout_height="40px" 
+    	android:layout_marginTop="410px"
+    	android:layout_marginLeft="423px"
+    	android:visibility="gone"
+    	/>
+    	<Button 
+    	android:id="@+id/smalleraser"
+    	android:background="@drawable/smalleraser"		
+    	android:layout_width="40px" 
+    	android:layout_height="40px" 
+    	android:layout_marginTop="470px"
+    	android:layout_marginLeft="423px"
+    	android:visibility="gone"
+    	/>
+
+    </RelativeLayout>
+    
+    
+    
+     <LinearLayout 
+   		android:layout_width="60px" 
+   		android:layout_height="500dip"
+   		android:orientation="vertical"
+   		android:layout_marginLeft="410px"
+   		android:layout_marginTop="360px"
+   		android:background="#00000000"
+   		>  
+   	<Button 
+    android:id="@+id/upquickid"
+    android:background="@drawable/upquick"			
+    android:layout_width="60px" 
+    android:layout_height="60px" 
+    android:layout_marginTop="10px"  
+    android:layout_marginLeft="0px"
+    android:visibility="visible"
+    />	
+   		
+	<Button 
+    android:id="@+id/upslow"
+    android:background="@drawable/up"			
+    android:layout_width="60px" 
+    android:layout_height="60px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="0px"
+    android:visibility="visible"
+    />  
+      
+	<Button 
+    android:id="@+id/manualsubmit"
+    android:background="@drawable/done1"			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+     android:layout_marginTop="5px"
+    android:layout_marginLeft="0px"
+    android:visibility="invisible"
+    />  
+
+    
+    <Button 
+    android:id="@+id/downslow"
+    android:background="@drawable/down"			
+    android:layout_width="60px" 
+    android:layout_height="60px" 
+     android:layout_marginTop="10px"
+    android:layout_marginLeft="0px"
+    android:visibility="visible"
+    />  
+
+
+    <Button 
+    android:id="@+id/downquickid"
+    android:background="@drawable/downquick"			
+    android:layout_width="60px" 
+    android:layout_height="60px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="-3px"
+    android:visibility="visible"
+    />  
+    
+   	 </LinearLayout >
+   		
+ </RelativeLayout> 

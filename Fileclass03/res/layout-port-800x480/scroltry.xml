@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+     <!--屏幕分辨率：480*800 -->
+
+ 	
+ 	
+ <ScrollView 
+ android:layout_width="fill_parent" 
+ android:layout_height="wrap_content"
+ android:scrollbars="vertical" 
+ android:fadingEdge="vertical" 
+ android:scrollbarFadeDuration="1000"
+ android:fadeScrollbars="true"
+ android:scrollbarThumbVertical="@drawable/green"
+ android:scrollbarSize="2sp"
+ 
+ android:id="@+id/scroll"
+  android:layout_weight ="1"
+ android:cacheColorHint="#00000000"  > 
+ <com.study.android.HWtrying.PView
+   android:id="@+id/pviewid"
+   android:layout_width="fill_parent" 
+   android:layout_height="wrap_content"/> 
+   </ScrollView>
+   
+   
+     <TableLayout 
+     android:id="@+id/tablelayout1"
+    android:layout_width="480px"
+     android:layout_height="66px"
+     android:background="#FFFFFF"
+     >
+     
+  	<TableRow>
+    <Button 
+    android:id="@+id/buttonedit"
+    android:layout_width="40px" 
+    android:layout_height="40px" 
+    android:layout_marginLeft="10px"
+     android:layout_marginTop="8px"
+     android:background="@drawable/shuxie"	
+    />
+    
+    <Button 
+    android:id="@+id/buttonmail"
+    android:layout_width="40px" 
+    android:layout_height="40px" 
+    android:layout_marginLeft="28px"
+    android:layout_marginTop="8px"
+    android:background="@drawable/send"	
+    />
+    
+    </TableRow>
+ 	</TableLayout>	
+   </LinearLayout>

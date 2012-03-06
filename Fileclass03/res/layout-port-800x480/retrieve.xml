@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    >
+    <!-- 注意，这里ListView的id是是系统自定义的android:list，我们不能随便改，改了后ListActivity就无法找到ListView了 --> 
+   <!--屏幕分辨率：480*800 在给layout命名时候应该写成layout-800x480(注意：“x”为英文小写字母！！)-->
+   <!-- 半透明 ：“#e0000000”  透明：“#00000000”-->
+   
+    <TableLayout 
+     android:id="@+id/tablelayout1"
+     android:layout_width="480px"
+     android:layout_height="66px"
+     >
+     
+  	<TableRow>
+    <Button 
+    android:id="@+id/button1"			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="20px"
+    android:layout_marginTop = "13px"
+    />
+    <Button 
+    android:id="@+id/button2"
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="20px"
+    android:layout_marginTop = "11px"
+    />
+    <Button 
+    android:id="@+id/button3"
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="280px"
+    android:layout_marginTop = "11px"
+    />
+    </TableRow>
+ 	</TableLayout>
+
+    <!--  <ListView android:layout_width="fill_parent"   
+          android:layout_height="fill_parent" 
+          android:layout_weight ="1"  
+          android:id="@id/android:list"
+          android:divider="#FFCC00"   
+          android:dividerHeight="2px" 
+          android:cacheColorHint="#00000000" 
+ 		  android:scrollbarFadeDuration="1000"
+ 		 android:fadeScrollbars="true" 
+         />   -->
+        <ListView android:layout_width="fill_parent"   
+          android:layout_height="fill_parent" 
+          android:layout_weight ="1"  
+          android:id="@id/android:list"
+          android:divider="#00000000"   
+          android:dividerHeight="1px"
+          android:cacheColorHint="#00000000" 
+ 		  android:scrollbarFadeDuration="0"
+ 		 android:fadeScrollbars="true" 
+         /> 
+     <!--  
+       <ListView android:layout_width="fill_parent"   
+          android:layout_height="fill_parent" 
+          android:layout_weight ="1"  
+          android:id="@id/android:list"
+           android:divider="@drawable/divider"   
+          android:dividerHeight="1px" 
+          android:cacheColorHint="#00000000" 
+ 		  android:scrollbarFadeDuration="1000"
+ 		 android:fadeScrollbars="true" 
+         />  
+       -->   
+         
+           
+           <TableLayout 
+     android:id="@+id/tablelayout2"
+     android:layout_width="480px"
+     android:layout_height="50px"
+     >
+     
+  	<TableRow>   
+    	<Button 
+    		android:id="@+id/buttondelete"		
+    		android:layout_width="50px" 
+    		android:layout_height="50px" 
+    		android:layout_marginTop="0px"
+    		android:layout_marginLeft="420px"
+    	/>   
+
+
+
+
+</TableRow>
+    </TableLayout >   
+             
+</LinearLayout>

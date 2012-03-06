@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:id="@+id/exportdialog">
+  <LinearLayout
+  android:layout_width="460px"
+  android:layout_height="60px"
+  android:layout_marginTop="10px"
+  android:id="@+id/exportlayout01">
+ 	 <TextView 
+ 	 android:layout_height="30px"
+ 	 android:layout_width="90px"
+ 	 android:text="文件名：" />
+ 	 <EditText 
+ 	 android:layout_height="60px"
+ 	 android:layout_width="320px" 
+ 	 android:id="@+id/exportfilename" 
+  	android:layout_marginLeft="0px"/>
+  </LinearLayout>
+  <LinearLayout
+  android:layout_width="400px"
+  android:layout_height="140px"
+  android:orientation="vertical"
+  android:id="@+id/exportlayout02">
+  	<TextView 
+ 	 android:layout_height="30px"
+ 	 android:layout_width="80px"
+ 	 android:layout_marginTop="5px"
+ 	 android:text="格式：" />
+
+ 	 <RadioGroup
+ 	     android:id="@+id/formatgroup"
+ 	     android:layout_width="284dp"
+ 	     android:layout_height="fill_parent"
+ 	     android:orientation="vertical" >
+	 
+ 	 <RadioButton
+ 	 android:id="@+id/pngid"
+ 	 android:layout_height="55px"
+ 	 android:layout_width="wrap_content"
+	 android:text="@string/pngpic"/>
+	 <RadioButton
+ 	 android:id="@+id/pdfid"
+ 	 android:layout_height="55px"
+ 	 android:layout_width="wrap_content"
+ 	 android:text="@string/pdffile"/>
+ 	 </RadioGroup>
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/exportlayout03"
+      android:layout_width="299dp"
+      android:layout_height="170px"
+      android:orientation="vertical" >
+
+ 	 <TextView 
+ 	 android:layout_height="30px"
+ 	 android:layout_width="80px"
+ 	 android:layout_marginTop="5px"
+ 	 android:text="大小：" />
+ 	 <RadioGroup
+ 	 android:id="@+id/sizegroup"
+ 	 android:layout_height="wrap_content"
+ 	 android:layout_width="wrap_content"
+ 	 android:orientation="vertical"
+ 	 android:layout_x="3px"
+ 	 android:layout_y="54px">	 
+ 	 <RadioButton
+ 	 android:id="@+id/a4id"
+ 	 android:layout_height="wrap_content"
+ 	 android:layout_width="wrap_content"
+ 	 android:text="@string/a4size"/>
+ 	 <RadioButton
+ 	 android:id="@+id/b5id"
+ 	 android:layout_height="wrap_content"
+ 	 android:layout_width="wrap_content"
+  	 android:text="@string/b5size"/>
+  	 </RadioGroup>
+ </LinearLayout>
+
+ <LinearLayout
+     android:id="@+id/exportlayout04"
+     android:layout_width="480px"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal" >
+	 
+ 	 <Button
+ 	 android:id="@+id/exportfilebuttonsure"
+ 	 android:layout_height="wrap_content"
+ 	 android:layout_width="wrap_content"
+ 	 android:layout_marginLeft="160px"
+ 	 android:text="@string/sure"/>
+ 	 <Button
+ 	 android:id="@+id/exportfilebuttoncancel"
+ 	 android:layout_height="wrap_content"
+ 	 android:layout_width="wrap_content"
+ 	 android:layout_marginLeft="60px"
+  	 android:text="@string/cancel"/>
+ </LinearLayout>
+  <LinearLayout
+  android:layout_width="450px"
+  android:layout_height="150px"
+  android:orientation="horizontal"
+  android:id="@+id/exportlayout05"
+  android:visibility="gone">
+ <ProgressBar
+ android:id="@+id/exportprogressbarid"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ style="?android:attr/progressBarStyleLarge">
+ </ProgressBar>
+ <TextView 
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:layout_marginTop="35px"
+ android:text="正在导出文件，请稍候……"/>
+ </LinearLayout>
+</LinearLayout>

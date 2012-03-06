@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    >   
+     <TextView   
+     android:text="关于"
+     android:textColor="#FFCC00"
+     android:textSize="20dip"
+     android:layout_width="60px"
+     android:layout_height="40px"
+     android:layout_marginTop="10px"
+     android:layout_marginLeft="210px"
+     />   
+     <!-- -->
+      <ScrollView
+      android:layout_width="fill_parent" 
+ 	  android:layout_height="wrap_content"
+ 	  android:scrollbars="vertical" 
+      android:fadingEdge="vertical"
+      android:layout_marginTop = "60px" 
+      >
+
+     	<TextView
+     		android:id="@+id/aboutcontent"
+     		android:text="\t\t当前的手写记事本、亲笔信或者备忘录等最大的问题在于不能对手写的文字像普通字符那样进行插入、删除、换行、缩进等编辑操作，一旦前面的文字书写错误，则很难弥补。eFingerNotes（易福记事本）独特之处正是克服了这一致命缺陷。通过完全不同的设计，用户除了可以像在纸上书写那样方便、自由的书写，更可以在eFingerNotes中像编辑普通的电子文档那样执行上述操作。比如当你删除前面所录入的一个或者一段文字、图形或公式后，后面的文字会自动重新排版，填补前面的空白，同样，如果在前面插入新的内容，后面的内容也会自动重排。更重要的是，所有的编辑操作都可以自动识别你的指尖所画出的简单的笔势来完成，一旦掌握这些技巧，你将获得一个非常灵活自由的书写工具。我们也欢迎您将您在使用过程中遇到的任何问题及时反馈到我们的电子邮件efingernotes@hotmail.com中，我们将及时解答您的任何问题。"
+     		android:textColor="#000000"
+     		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+     	/>
+     </ScrollView>
+	<ImageView 
+	android:id="@+id/imageid"
+	android:layout_width="230px" 
+	android:layout_height="250px" 
+	android:layout_marginLeft="130px"
+	 android:layout_marginTop = "160px"
+	android:src="@drawable/aboutsystem" 
+	/>   
+
+     
+    </RelativeLayout>

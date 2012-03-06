@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TableLayout 
+     android:id="@+id/tablelayout12"
+     android:layout_width="800px"
+     android:layout_height="60px"
+     >
+  	<TableRow>
+    
+     <TextView   
+     android:text="背景颜色设置"
+     android:textColor="#FFCC00"
+     android:textSize="20dip"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft = "350px" 
+      android:layout_marginTop="-5px"
+     />   
+     </TableRow>
+     </TableLayout> 
+     <GridView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/gridview"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:numColumns="auto_fit"
+    android:verticalSpacing="10dp"
+    android:horizontalSpacing="10dp"
+    android:columnWidth="90dp"
+    android:stretchMode="columnWidth"
+    android:gravity="center"
+/>
+</LinearLayout>

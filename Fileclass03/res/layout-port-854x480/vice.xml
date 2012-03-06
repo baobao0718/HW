@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    
+    >
+
+  <!--android:background="@drawable/portkviewbackground"-->
+   <com.study.android.HWtrying.Mview
+   android:id="@+id/mviewid"
+   android:layout_width="fill_parent" 
+   android:layout_height="wrap_content" 
+   />
+   
+   <com.study.android.HWtrying.Kview
+   android:id="@+id/kviewid"
+   android:layout_width="fill_parent" 
+   android:layout_height="wrap_content"
+   /> 
+ 
+   <TableLayout 
+     android:id="@+id/emailtablelayout"
+     android:layout_width="480px"
+     android:layout_height="60px"
+     android:background="#00000000"
+     >
+     
+  	<TableRow>
+    <Button 
+    android:id = "@+id/exportbutton"
+ 
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="410px"
+    android:layout_marginTop = "8px"
+    />
+     
+    </TableRow>
+ 	</TableLayout>
+
+	<TextView
+	    android:id="@+id/tipsid" 
+	    android:textColor="#ff5500"
+	    android:text="请输入标题，按完成结束。"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone"
+	    android:layout_marginTop="120px"
+    	android:layout_marginLeft="70px">	    
+	</TextView>  
+	<Button 
+    android:id="@+id/button"
+    android:background="#00000000"			
+    android:layout_width="60px" 
+    android:layout_height="40px" 
+    android:text="完成"
+    android:textColor="#ff5500"
+    android:layout_marginTop="80px"
+    android:layout_marginLeft="380px"
+    /> 
+     
+
+   
+   	
+     <LinearLayout android:id="@+id/AbsoluteLayout02" 
+   	android:layout_width="480px" 
+   	android:layout_height="60px"
+   	android:orientation="horizontal"
+   	android:layout_marginTop="795px"
+   	android:background="#00000000"
+   >
+
+    <Button 
+    android:id="@+id/textid"
+				
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="0px"
+    
+    />
+    
+    <Button 
+    android:id="@+id/graphid"
+			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="0px"
+    android:visibility="gone"
+    />
+    
+    <Button 
+    android:id="@+id/editid"
+			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="0px"
+    />
+     
+    <Button 
+    android:id="@+id/spaceid"
+			
+    android:layout_width="70px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="0px"
+    />
+    
+    <Button 
+    android:id="@+id/enterid"
+			
+    android:layout_width="60px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="0px"
+    android:visibility="gone"
+    />
+    
+     
+    <Button 
+    android:id="@+id/backspaceid"
+			
+    android:layout_width="55px" 
+    android:layout_height="65px" 
+    android:layout_marginTop="-6px"
+    android:layout_marginLeft="0px"
+    />
+	</LinearLayout> 
+     <LinearLayout  
+   	android:layout_width="480px" 
+   	android:layout_height="60px"
+   	android:orientation="horizontal"
+   	android:layout_marginTop="800px"
+   	android:background="#00000000"
+   >
+	<Button 
+    android:id="@+id/doneid"
+		
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="370px"
+  
+    
+    />
+    
+    <Button 
+    android:id="@+id/autospace"
+			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginLeft="0px"
+   
+    />
+	</LinearLayout> 
+    <RelativeLayout android:id="@+id/AbsoluteLayout003" 
+   	android:layout_width="480px" 
+   	android:layout_height="854px"
+   	android:background="#00000000"
+   >
+    <LinearLayout android:id="@+id/AbsoluteLayout03" 
+   		android:layout_width="80px" 
+   		android:layout_height="400dip"
+   		android:layout_marginTop="120px"
+   		android:layout_marginLeft="410px"
+   		android:orientation="vertical"
+   		android:background="#00000000"
+   		>  
+   		<!-- android:visibility="invisible" -->
+    <Button 
+    android:id="@+id/backtodraw"
+			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="0px"
+    android:layout_marginLeft="0px"
+    android:visibility="invisible"
+    />  
+     <Button 
+    android:id="@+id/eraserid"
+		
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="20px"
+    android:layout_marginLeft="0px"
+    android:visibility="invisible"
+    />
+    <!--  -->
+    <Button 
+    android:id="@+id/innertextid"
+		
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="20px"
+    android:layout_marginLeft="00px"
+    android:visibility="invisible"
+    />
+    <Button 
+    android:id="@+id/colorofimagepaint"
+			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="20px"
+    android:layout_marginLeft="0px"
+    android:visibility="invisible"
+    />    
+     <!-- android:visibility="gone" -->
+    <TextView 
+    android:id="@+id/paintstrokesizetext"			
+    android:layout_width="60px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="20px"
+    android:layout_marginLeft="0px"
+    android:visibility="gone"
+    android:text=" 粗细"
+    android:textColor="#ffff00"
+    android:textSize="13dip"
+    /> 
+    
+     <TextView
+    android:id="@+id/innertextsizetext"		
+    android:layout_width="80px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="20px"
+    android:layout_marginLeft="-5px"
+    android:visibility="gone"
+    android:textColor="#ffff00"
+    android:text=" 字大小"
+    android:textSize="13dip"
+    /> 
+    
+      </LinearLayout>
+     
+   </RelativeLayout>  
+      
+    <RelativeLayout android:id="@+id/AbsoluteLayout04" 
+   		android:layout_width="wrap_content" 
+   		android:layout_height="480dip"
+   		android:background="#00000000"
+   		>   
+   		
+   	<!-- SeekBar01 为画笔粗细的垂直滚动条 -->
+    <com.study.android.VerticalSeekbar.VerticalSeekBar
+	android:id="@+id/SeekBar01"
+    android:progressDrawable="@drawable/progress_vertical"
+    android:thumb="@drawable/seek_thumb"
+    android:max="100"
+    android:progress="40"
+    android:layout_height="120px" 
+    android:layout_width="30px"
+ 	android:layout_marginTop="470px"
+    android:layout_marginLeft="420px"
+    android:visibility="gone"
+    /> 
+    
+    <!-- SeekBar02 为内嵌字的垂直滚动条android:visibility="gone" -->
+    <com.study.android.VerticalSeekbar.VerticalSeekBar
+	android:id="@+id/SeekBar02"
+    android:progressDrawable="@drawable/progress_vertical"
+    android:thumb="@drawable/seek_thumb"
+    android:max="100"
+    android:progress="40"
+    android:layout_height="120px" 
+    android:layout_width="30px"
+ 	android:layout_marginTop="470px"
+    android:layout_marginLeft="420px"
+    android:visibility="gone"
+    /> 
+ 
+   		<Button 
+    	android:id="@+id/largeeraser"
+	
+    	android:layout_width="35px" 
+    	android:layout_height="35px" 
+    	android:layout_marginTop="410px"
+    	android:layout_marginLeft="420px"
+    	android:visibility="gone"
+    	/>
+    	<Button 
+    	android:id="@+id/middleeraser"
+		
+    	android:layout_width="35px" 
+    	android:layout_height="35px" 
+    	android:layout_marginTop="480px"
+    	android:layout_marginLeft="420px"
+    	android:visibility="gone"
+    	/>
+    	<Button 
+    	android:id="@+id/smalleraser"
+		
+    	android:layout_width="35px" 
+    	android:layout_height="35px" 
+    	android:layout_marginTop="550px"
+    	android:layout_marginLeft="420px"
+    	android:visibility="gone"
+    	/>
+
+    </RelativeLayout>
+    
+    
+    
+     <LinearLayout 
+   		android:layout_width="60px" 
+   		android:layout_height="200dip"
+   		android:orientation="vertical"
+   		android:layout_marginLeft="410px"
+   		android:layout_marginTop="450px"
+   		>  
+   		
+	 
+    <Button 
+    android:id="@+id/upquickid"
+			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="10px"  
+    android:layout_marginLeft="0px"
+    android:visibility="visible"
+    />  
+
+   <Button 
+    android:id="@+id/upslow"
+			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="0px"
+    android:visibility="visible"
+    /> 
+
+	<Button 
+    android:id="@+id/manualsubmit"
+			
+    android:layout_width="55px" 
+    android:layout_height="55px" 
+     android:layout_marginTop="5px"
+    android:layout_marginLeft="0px"
+    android:visibility="invisible"
+    />  
+
+    <Button 
+    android:id="@+id/downslow"
+		
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="0px"
+    android:visibility="visible"
+    /> 
+    
+    <Button 
+    android:id="@+id/downquickid"
+			
+    android:layout_width="50px" 
+    android:layout_height="50px" 
+    android:layout_marginTop="10px"
+    android:layout_marginLeft="0px"
+    android:visibility="visible"
+    />  
+    
+    
+   	 </LinearLayout >
+
+   		
+ </RelativeLayout> 

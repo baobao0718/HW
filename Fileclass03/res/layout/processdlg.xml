@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="450px"
+  android:layout_height="150px"
+    android:orientation="horizontal" 
+    android:visibility="invisible"
+    android:id="@+id/proglayout">
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        
+   	 	style="?android:attr/progressBarStyleLarge">
+ 	</ProgressBar>
+ <TextView 
+ 	android:layout_width="wrap_content"
+ 	android:layout_height="wrap_content"
+ 	android:layout_marginTop="35dip"
+ 	android:text="正在导出文件，请稍候……"/>
+
+</LinearLayout>

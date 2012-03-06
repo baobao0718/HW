@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/landbground"
+    >
+    <!-- 注意，这里ListView的id是是系统自定义的android:list，我们不能随便改，改了后ListActivity就无法找到ListView了 --> 
+   <!--屏幕分辨率：240 *432 -->
+   <!-- 半透明 ：“#e0000000”  透明：“#00000000”-->
+   
+    <TableLayout 
+     android:id="@+id/tablelayout1"
+     android:layout_width="432px"
+     android:layout_height="18px"
+     >
+     
+  	<TableRow>
+    <Button 
+    android:id="@+id/button1"
+    android:background="#00000000"			
+    android:layout_width="90px" 
+    android:layout_height="18px" 
+    android:layout_marginLeft="0px"
+    android:text="前月"
+    />
+    <Button 
+    android:id="@+id/button2"
+    android:background="#00000000"
+    android:layout_width="90px" 
+    android:layout_height="18px" 
+    android:layout_marginLeft="65px"
+    android:text="后月"
+    />
+    <Button 
+    android:id="@+id/button3"
+    android:background="#00000000"
+    android:layout_width="90px" 
+    android:layout_height="18px" 
+    android:layout_marginLeft="65px"
+    android:text="新建"
+    />
+    </TableRow>
+ 	</TableLayout>
+
+     <ListView android:layout_width="wrap_content"   
+           android:layout_height="wrap_content"   
+          android:id="@id/android:list"
+          />    
+</LinearLayout>

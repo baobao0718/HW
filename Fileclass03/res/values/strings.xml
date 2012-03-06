@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, HWtrying!</string>
+    <string name="app_name">eFinger</string>
+    <string name="intro1">text1</string>
+    <string name="intro0">text0</string>
+     <string name="Delete">Delete</string>
+    <string name="str_receive">收件人</string>
+    <string name="str_cc">抄送</string>
+    <string name="str_button">发送</string>
+     <string name="str_subject">主题</string>
+     <string name="ok">OK</string>
+     <string name = "eFinger">eFinger</string>
+     <string name = "color1"></string>
+     <string name = "color2"></string>
+     <string name = "color3"></string>
+     <string name = "color4"></string>
+     <string name = "function1">发送</string>
+     <string name = "function2">导出</string>
+     <string name = "classname">类名</string>
+     <string name = "background">背景</string>
+     <string name = "create">新建</string>
+     <string name = "done">完成</string>
+     <string name = "pngpic">png图片</string>
+     <string name = "pdffile">pdf文件</string>
+     <string name = "a4size">A4</string>
+     <string name = "b5size">B5</string>
+     <string name = "sure">确定</string>
+     <string name = "cancel">取消</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>  
+
+ <RelativeLayout   
+     android:id="@+id/RelativeLayout01"   
+     android:layout_width="fill_parent"   
+     xmlns:android="http://schemas.android.com/apk/res/android"   
+     android:layout_height="wrap_content" >   
+	<!-- android:paddingBottom="1dip"  -->
+ <com.study.android.retrieval.Retrieveview
+   	 android:id="@+id/drawviewid"
+   	 android:layout_marginTop = "18px"
+   	 android:layout_width="fill_parent" 
+   	 android:layout_height="50px"/>  
+ <TextView   
+     android:text="TextView01"
+     android:layout_width="300px"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft = "32px"
+     android:layout_marginTop = "23px"
+     android:id="@+id/ItemTitle"  
+     />   
+     <TextView   
+     android:text="TextView02"
+     android:layout_width="300px"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft = "150px"
+     android:layout_marginTop = "23px"
+     android:textSize="20dip"
+     android:id="@+id/NoTitle"  
+     />     
+    <Button
+     android:id="@+id/delete"
+    android:layout_width="80px" 
+    android:layout_height="55px" 
+     android:layout_marginLeft = "380px"
+     android:layout_marginTop = "20px" 
+    android:text="@string/Delete"
+    android:visibility="invisible"
+  /> <!---->
+</RelativeLayout>

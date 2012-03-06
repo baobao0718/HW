@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    
+     
+ 	
+ 	
+ <ScrollView 
+ android:layout_width="fill_parent" 
+ android:layout_height="wrap_content"
+ android:scrollbars="vertical" 
+ android:fadingEdge="vertical" 
+  android:layout_weight ="1"
+ android:cacheColorHint="#00000000"  > 
+ <com.study.android.HWtrying.PView
+   android:id="@+id/pviewid"
+   android:layout_width="fill_parent" 
+   android:layout_height="wrap_content"/> 
+   </ScrollView>
+   
+   
+   <TableLayout 
+     android:id="@+id/tablelayout1"
+     android:layout_width="320px"
+     android:layout_height="40px"
+     >
+     
+  	<TableRow>
+    <Button 
+	android:id="@+id/buttonback"	
+	android:layout_width="60px" 
+    android:layout_height="40px"
+    android:layout_marginLeft="10px"
+    android:text="返回"
+    />
+    <Button 
+    android:id="@+id/buttonedit"
+    android:layout_width="60px" 
+    android:layout_height="40px"
+    android:layout_marginLeft="40px"
+    android:text="输入"
+    />
+    
+    <Button 
+    android:id="@+id/buttonmail"
+    android:layout_width="60px" 
+    android:layout_height="40px" 
+    android:layout_marginLeft="70px"
+    android:text="Mail"
+    />
+    
+    </TableRow>
+ 	</TableLayout>	
+   </LinearLayout>

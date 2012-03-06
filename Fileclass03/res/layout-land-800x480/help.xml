@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TableLayout 
+     android:layout_width="800px"
+     android:layout_height="60px"
+     >
+  	<TableRow>
+    
+     <TextView   
+     android:text="帮助"
+     android:textColor="#FFCC00"
+     android:textSize="20dip"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft = "410px" 
+     android:layout_marginTop="-5px"
+     />   
+     </TableRow>
+     </TableLayout>
+   
+           <ListView android:layout_width="fill_parent"   
+          android:layout_height="fill_parent" 
+          android:layout_weight ="1"  
+          android:id="@id/android:list"
+          android:divider="#FFCC00"   
+          android:dividerHeight="2px" 
+          android:cacheColorHint="#00000000" 
+         />  
+</LinearLayout>
