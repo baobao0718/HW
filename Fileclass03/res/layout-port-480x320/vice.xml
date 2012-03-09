@@ -17,14 +17,7 @@
    android:layout_width="fill_parent" 
    android:layout_height="wrap_content"
    /> 
-    
-   
-   
-    
 
-
-  
-   
    <TableLayout 
      android:id="@+id/emailtablelayout"
      android:layout_width="320px"
@@ -135,21 +128,13 @@
     android:layout_height="37px" 
     android:layout_marginLeft="0px"
     />
-	</LinearLayout> 
-     <LinearLayout  
-   	android:layout_width="320px" 
-   	android:layout_height="40px"
-   	android:orientation="horizontal"
-   	android:layout_marginTop="450px"
-   	android:background="#00000000"
-   >
-	<Button 
+    
+    <Button 
     android:id="@+id/doneid"
     android:background="@drawable/done"			
     android:layout_width="30px" 
-    android:layout_height="26px" 
-    android:layout_marginLeft="240px"
-  
+    android:layout_height="30px" 
+    android:layout_marginLeft="50px"
     
     />
     
@@ -159,9 +144,17 @@
     android:layout_width="30px" 
     android:layout_height="30px" 
     android:layout_marginLeft="5px"
-   
     />
 	</LinearLayout> 
+<!--      <LinearLayout   -->
+<!--    	android:layout_width="320px"  -->
+<!--    	android:layout_height="40px" -->
+<!--    	android:orientation="horizontal" -->
+<!--    	android:layout_marginTop="450px" -->
+<!--    	android:background="#00000000" -->
+<!--    > -->
+	
+<!-- 	</LinearLayout>  -->
     <RelativeLayout android:id="@+id/AbsoluteLayout003" 
    	android:layout_width="320px" 
    	android:layout_height="480px"
@@ -229,9 +222,9 @@
     android:layout_marginTop="10px"
     android:layout_marginLeft="0px"
     android:visibility="gone"
-    android:text=" 粗细"
+    android:text="粗细"
     android:textColor="#ffff00"
-    android:textSize="10dip"
+    android:textSize="15dip"
     /> 
     
      <TextView
@@ -242,8 +235,8 @@
     android:layout_marginLeft="0px"
     android:visibility="gone"
     android:textColor="#ffff00"
-    android:text=" 字大小"
-    android:textSize="10dip"
+    android:text="字号"
+    android:textSize="15dip"
     /> 
     
       </LinearLayout>
@@ -264,9 +257,9 @@
     android:max="100"
     android:progress="40"
     android:layout_height="120px" 
-    android:layout_width="30px"
+    android:layout_width="25px"
  	android:layout_marginTop="280px"
-    android:layout_marginLeft="280px"
+    android:layout_marginLeft="285px"
     android:visibility="gone"
     /> 
     
@@ -278,39 +271,39 @@
     android:max="100"
     android:progress="40"
     android:layout_height="120px" 
-    android:layout_width="30px"
+    android:layout_width="25px"
  	android:layout_marginTop="280px"
-    android:layout_marginLeft="280px"
+    android:layout_marginLeft="285px"
     android:visibility="gone"
     /> 
  
-   		<Button 
-    	android:id="@+id/largeeraser"
-    	android:background="@drawable/largeeraser"		
-    	android:layout_width="35px" 
-    	android:layout_height="35px" 
-    	android:layout_marginTop="230px"
-    	android:layout_marginLeft="280px"
-    	android:visibility="gone"
-    	/>
-    	<Button 
-    	android:id="@+id/middleeraser"
-    	android:background="@drawable/middleeraser"		
-    	android:layout_width="35px" 
-    	android:layout_height="35px" 
-    	android:layout_marginTop="280px"
-    	android:layout_marginLeft="280px"
-    	android:visibility="gone"
-    	/>
-    	<Button 
-    	android:id="@+id/smalleraser"
-    	android:background="@drawable/smalleraser"		
-    	android:layout_width="35px" 
-    	android:layout_height="35px" 
-    	android:layout_marginTop="330px"
-    	android:layout_marginLeft="280px"
-    	android:visibility="gone"
-    	/>
+  	<Button 
+   	android:id="@+id/largeeraser"
+   	android:background="@drawable/largeeraser"		
+   	android:layout_width="35px" 
+   	android:layout_height="35px" 
+   	android:layout_marginTop="230px"
+   	android:layout_marginLeft="280px"
+   	android:visibility="gone"
+   	/>
+   	<Button 
+   	android:id="@+id/middleeraser"
+   	android:background="@drawable/middleeraser"		
+   	android:layout_width="35px" 
+   	android:layout_height="35px" 
+   	android:layout_marginTop="280px"
+   	android:layout_marginLeft="280px"
+   	android:visibility="gone"
+   	/>
+   	<Button 
+   	android:id="@+id/smalleraser"
+   	android:background="@drawable/smalleraser"		
+   	android:layout_width="35px" 
+   	android:layout_height="35px" 
+   	android:layout_marginTop="330px"
+   	android:layout_marginLeft="280px"
+   	android:visibility="gone"
+   	/>
 
     </RelativeLayout>
     
