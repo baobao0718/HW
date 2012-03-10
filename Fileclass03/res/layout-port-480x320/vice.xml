@@ -131,10 +131,10 @@
     
     <Button 
     android:id="@+id/doneid"
-    android:background="@drawable/done"			
+    android:background="@drawable/ok"			
     android:layout_width="30px" 
     android:layout_height="30px" 
-    android:layout_marginLeft="50px"
+    android:layout_marginLeft="15px"
     
     />
     

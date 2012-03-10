@@ -117,7 +117,7 @@ public class WritebySurfaceView extends Activity implements
 	private Drawable landviewbackgroundimage, portviewbackgroundimage;
 	private Drawable UpslowImage,
 	DownslowImage, UpQuickImage, DownQuickImage, exportimage,biimage,
-	konggeimage, huicheimage,huituiimage,doneimage,spacectrlimage,
+	konggeimage, huicheimage,huituiimage,doneimage,okimage,spacectrlimage,
 	yanseimage,largeeraserimage,middleeraserimage,smalleraserimage,
 	bianjiimageselected, konggeimageselected, huicheimageselected,
 	huituiimageselected,doneimageselected,spacectrlimageselected,
@@ -277,7 +277,7 @@ public class WritebySurfaceView extends Activity implements
 		// 因为只有在Mview和Kview里面才能用postinvalidate（）
 		public void onClick(View v)
 		{
-//			Log.e("haha","hah ");
+			Log.e("haha","hah ");
 			
 			ListTable.TypeofUnit = Context_STATE.Context_STATE_1;
 			ListTable.TypeofGraph = Context_STATE.Graph_STATE_0;
@@ -302,8 +302,8 @@ public class WritebySurfaceView extends Activity implements
 					.setBackgroundDrawable(biimageselected);
 			WritebySurfaceView.button_edit
 					.setBackgroundDrawable(bianjiimage);
-			WritebySurfaceView.button_backspace
-					.setVisibility(View.GONE);
+			WritebySurfaceView.button_backspace				//有问题的东西(已修改为INVISIBLE)
+					.setVisibility(View.INVISIBLE);				
 			WritebySurfaceView.button_upslow
 					.setVisibility(View.GONE);
 			WritebySurfaceView.button_downslow
@@ -1071,7 +1071,7 @@ public class WritebySurfaceView extends Activity implements
 						.setBackgroundDrawable(biimageselected);
 			} else if (event.getAction() == MotionEvent.ACTION_UP)
 				WritebySurfaceView.button_done
-						.setBackgroundDrawable(doneimage);
+						.setBackgroundDrawable(okimage);
 			return false;
 		}
 		
@@ -1738,6 +1738,7 @@ public class WritebySurfaceView extends Activity implements
 		huicheimage = this.getResources().getDrawable(R.drawable.huiche);
 		huituiimage = this.getResources().getDrawable(R.drawable.huitui);
 		doneimage = this.getResources().getDrawable(R.drawable.done);
+		okimage=this.getResources().getDrawable(R.drawable.ok);
 		spacectrlimage = this.getResources().getDrawable(R.drawable.spacectrl);
 		eraserimage = this.getResources().getDrawable(R.drawable.eraser);
 		wenziimage = this.getResources().getDrawable(R.drawable.wenzi);
@@ -1963,7 +1964,6 @@ public class WritebySurfaceView extends Activity implements
 		/*********************************************************************************/
 
 		// button_autospace.setEnabled(false);
-
 		if (Typeofoper.equals("Edit"))
 		{
 			button_graph.setVisibility(View.VISIBLE);
@@ -2298,7 +2298,7 @@ public class WritebySurfaceView extends Activity implements
 		button_edit = (Button) findViewById(R.id.editid);
 		button_edit.setBackgroundDrawable(bianjiimage);
 		button_done = (Button) findViewById(R.id.doneid);
-		button_done.setBackgroundDrawable(doneimage);
+		button_done.setBackgroundDrawable(okimage);
 
 		/*********************************************************************************/
 		/********************** 控制Button **************************************************/
@@ -2347,9 +2347,9 @@ public class WritebySurfaceView extends Activity implements
 //		spinner_email = (Spinner) findViewById(R.id.emailspinner);
 //		spinner_email.setVisibility(View.GONE);
 		// 2011.06.20 liqiang
-		textview_paintstrokesizetext.setText(" 粗细 \n    "
+		textview_paintstrokesizetext.setText("粗细 \n    "
 				+ (short) paintstrokesize);
-		textview_innertextsizetext.setText(" 字大小\n   " + (short) innertextsize);
+		textview_innertextsizetext.setText("字号\n   " + (short) innertextsize);
 	}
 
 
