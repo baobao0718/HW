@@ -497,11 +497,14 @@ public class Fileclass extends Activity implements OnClickListener
 //	            	tv.setText(classname.trim()); 
 	            	
 	            	viewholder.label.setText(classname.trim());///
+//	            	viewholder.label.set
 //	            	viewholder.label.setText("#ffcc00");
 //	            	viewholder.label.setText(Color.argb(1, 1, 1, 0));
-	            	viewholder.label.setTextColor(Color.rgb(255, 230, 0));
+//	            	viewholder.label.setTextColor(Color.rgb(255, 230, 0));
+	            	viewholder.label.setTextColor(Color.rgb(0, 0, 255));
 	            	viewholder.classlabel = (ImageView)view.findViewById(R.id.icon_image);//
 	            	viewholder.classlabel.setScaleType(ImageView.ScaleType.FIT_CENTER);//
+//	            	Log.e("classlabel ","viewholder.classlabel.getWidth() "+viewholder.classlabel.getWidth()+" "+viewholder.classlabel.getHeight());
 	            	
 //	            	imageView = (ImageView)view.findViewById(R.id.icon_image); 
 //	            	imageView.setLayoutParams(new ViewGroup.LayoutParams(40, 60));

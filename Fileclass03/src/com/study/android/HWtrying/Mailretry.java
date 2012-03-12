@@ -105,7 +105,7 @@ public class Mailretry extends Activity {
 					Intent mailIntent = null;
 					if(pagecount==1||strexportfileformat.equals("pdf"))
 					{
-						Log.e("onepage","one page 11111!!");
+						Log.e("onepage","one page 11111!!"+mailfilename);
 						mailIntent = new Intent(
 								android.content.Intent.ACTION_SEND);
 					}
@@ -135,6 +135,17 @@ public class Mailretry extends Activity {
 					ArrayList<Uri> list = new ArrayList<Uri>();
 					if(strexportfileformat.trim().equals("png"))
 					{
+						if(pagecount==1)
+						{
+							File file = new File("/sdcard/eFinger/" + classname
+									+  "/Export/"+mailfilename+"_"+0+"."+strexportfileformat);
+							Log.i("debug in mailretry file name format is ",mailfilename+" "+strexportfileformat+" "+pagecount);
+								
+							mailIntent.putExtra(Intent.EXTRA_STREAM,
+									Uri.parse("file://" + file.getAbsolutePath()));
+						}
+						else
+						{
 						for(int i=0;i<pagecount;i++)
 						{
 							File file = new File("/sdcard/eFinger/" + classname
@@ -142,9 +153,9 @@ public class Mailretry extends Activity {
 							Log.i("debug in mailretry file name format is ",mailfilename+" "+strexportfileformat+" "+pagecount);
 							
 							list.add(Uri.parse("file://" + file.getAbsolutePath()));
-							
-						}
-						mailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, list);
+							mailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, list);
+						}}
+						
 					}
 					else if(strexportfileformat.trim().equals("pdf"))
 					{

@@ -458,7 +458,7 @@ public class OpenGlRender implements Renderer
 		}
 		}
 	}
-
+	float width=3f,charwidth=4f;
 	public synchronized void drawPictureUnit(GL10 gl)
 	{
 //		Log.i("debug in render ", "pointnum is1111111 "+drawpicturebufferlock);
@@ -498,16 +498,26 @@ public class OpenGlRender implements Renderer
 					for (int i = 0; i < pointnum; i++)
 					{
 //						Log.i("debug in draw pic","buffer is "+i+" "+drawpicbuffer.get(i*2)+" "+drawpicbuffer.get(i*2+1));
-						float charwidth = Mview.array.get(i).getStrokeWidth();	
+						
+						if(i==0||Mview.array.get(i-1).isEnd())
+						{
+							charwidth = Mview.array.get(i).getStrokeWidth();
+							gl.glLineWidth(charwidth);
+							width=charwidth/2f;
+							Log.i("debug in draw pic ","charwidth is "+charwidth+" "+width);
+						}
+						
+//						float charwidth = Mview.array.get(i).getStrokeWidth();	
 //						Log.i("debug in draw pic ","charwidth is "+charwidth);
-						if (charwidth <= 2f)
-							charwidth = 4f;				
-						charwidth = charwidth * 1.5f;
-						float width=charwidth/2f;
-						gl.glLineWidth(charwidth);
+//						if (charwidth <= 2f)
+//							charwidth = 4f;				
+//						charwidth = charwidth * 1.5f;
+//						float width=charwidth/2f;
+//						gl.glLineWidth(charwidth);
 						if (Mview.array.get(i).isEnd())
 						{
-							drawLittleCircle(gl, i, width, drawflag);
+							if(width>=4)
+								drawLittleCircle(gl, i, width, drawflag);
 							count++;
 							if (count < ListTable.globalcolorIndex.size())
 							{
@@ -527,20 +537,26 @@ public class OpenGlRender implements Renderer
 								{// 前一个点是一笔的结束点，当前点是另一笔的开始点
 									if (i == pointnum - 1)
 									{// i点是当前笔画的最后一个点
+										if(width>=4)
 										drawLittleCircle(gl, i, width, drawflag);
 									} else if(i<pointnum-1)
 									{
 										if(Mview.array.get(i).getX()==Mview.array.get(i+1).getX()
 												&&Mview.array.get(i).getY()==Mview.array.get(i+1).getY())
 											if(Mview.array.get(i+1).isEnd())
+											{
+												if(width>=4)
 												drawLittleCircle(gl, i, width, drawflag);
+											}
 											else
 											{
+												if(width>=4)
 												drawLittleCircle(gl, i, width, drawflag);
 												gl.glDrawArrays(GL10.GL_LINES, i, 2);
 											}
 										else
 										{
+											if(width>=4)
 											drawLittleCircle(gl, i, width, drawflag);
 											gl.glDrawArrays(GL10.GL_LINES, i, 2);
 										}
@@ -549,20 +565,26 @@ public class OpenGlRender implements Renderer
 								{
 									if (i == pointnum - 1)
 									{// i点是当前笔画的最后一个点
+										if(width>=4)
 										drawLittleCircle(gl, i, width, drawflag);
 									} else if(i<pointnum-1)
 									{
 										if(Mview.array.get(i).getX()==Mview.array.get(i+1).getX()
 												&&Mview.array.get(i).getY()==Mview.array.get(i+1).getY())
 											if(Mview.array.get(i+1).isEnd())
+											{
+												if(width>=4)
 												drawLittleCircle(gl, i, width, drawflag);
+											}
 											else
 											{
+												if(width>=4)
 												drawLittleCircle(gl, i, width, drawflag);
 												gl.glDrawArrays(GL10.GL_LINES, i, 2);
 											}
 										else
 										{
+											if(width>=4)
 											drawLittleCircle(gl, i, width, drawflag);
 											gl.glDrawArrays(GL10.GL_LINES, i, 2);
 										}
@@ -572,17 +594,22 @@ public class OpenGlRender implements Renderer
 							else// i = 0;
 							{
 								if(i==pointnum-1)//i 是当前笔画的最后一个点
+								{
+									if(width>=4)
 									drawLittleCircle(gl, i, width, drawflag);
+								}
 								else if(i<pointnum-1)
 								{
 									if(Mview.array.get(i).getX()==Mview.array.get(i+1).getX()
 										&&Mview.array.get(i).getY()==Mview.array.get(i+1).getY()
 										&&Mview.array.get(i+1).isEnd())
 									{
+										if(width>=4)
 										drawLittleCircle(gl, i, width, drawflag);
 									}
 									else
 									{
+										if(width>=4)
 										drawLittleCircle(gl, i, width, drawflag);
 										gl.glDrawArrays(GL10.GL_LINES, i, 2);
 									}		

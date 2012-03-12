@@ -191,7 +191,7 @@ public class Operationonrretrievalfile {
 					bodystruct.setFilename(filename1);
 					bodystruct.settitle(temptitle);
 					int size=computeTitleSize(temptitle);
-					bytecount+=16;
+					bytecount+=20+voffile;
 					bytecount+=size;
 					bodylist.add(bodystruct);	
 				}
@@ -444,7 +444,7 @@ public class Operationonrretrievalfile {
 					location=0;
 					location=head0struct.getlocationofnewrecord();
 			                                                      
-					location+=16;
+					location+=20+ListTable.filename.length();/////
 					
 					location+=titlesize;
 					//Log.i("DEBUG--->","JIANG XIE RU DE TITLE DE ZIJIE DA XIAO  "+titlesize);
@@ -648,7 +648,7 @@ public class Operationonrretrievalfile {
 				bodystruct.settitle(title);
 				bodylist.add(bodystruct);
 				titlesize=computeTitleSize(title);
-				lastlocation=temptotalbyte+16+titlesize-4;							//循环退出时候多加了4，在这里恢复
+				lastlocation=temptotalbyte+16+titlesize+ListTable.filename.length();///							//循环退出时候多加了4，在这里恢复
 				head0struct.setlocationofnewrecord(lastlocation);					//这才是Head0 的下一条新纪录应该写入的正确位置
 //				Log.v("DEBUG--->","temptotalbyte:-->"+temptotalbyte);
 //				Log.v("DEBUG--->","titlesize:-->"+titlesize);

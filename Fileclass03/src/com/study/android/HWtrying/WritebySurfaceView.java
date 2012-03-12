@@ -277,10 +277,13 @@ public class WritebySurfaceView extends Activity implements
 		// 因为只有在Mview和Kview里面才能用postinvalidate（）
 		public void onClick(View v)
 		{
-			Log.e("haha","hah ");
+//			Log.e("haha","hah ");
 			
 			ListTable.TypeofUnit = Context_STATE.Context_STATE_1;
 			ListTable.TypeofGraph = Context_STATE.Graph_STATE_0;
+			
+			WritebySurfaceView.vSeekBar.setVisibility(View.VISIBLE);
+			WritebySurfaceView.textview_paintstrokesizetext.setVisibility(View.VISIBLE);
 			WritebySurfaceView.button_color
 					.setVisibility(View.VISIBLE);
 			WritebySurfaceView.button_eraser
@@ -302,8 +305,8 @@ public class WritebySurfaceView extends Activity implements
 					.setBackgroundDrawable(biimageselected);
 			WritebySurfaceView.button_edit
 					.setBackgroundDrawable(bianjiimage);
-			WritebySurfaceView.button_backspace				//有问题的东西(已修改为INVISIBLE)
-					.setVisibility(View.INVISIBLE);				
+			WritebySurfaceView.button_backspace
+					.setVisibility(View.INVISIBLE);				/*2012.3.10 by zjc*/
 			WritebySurfaceView.button_upslow
 					.setVisibility(View.GONE);
 			WritebySurfaceView.button_downslow
@@ -1094,7 +1097,7 @@ public class WritebySurfaceView extends Activity implements
 						bundleinbrowse.putString("format", strexportfileformat);
 						mailintent.putExtras(bundleinbrowse);
 						startActivity(mailintent);// 2011.05.26 liqiang
-						Log.i("debug in handler in writebysurfaceview","pagecount is "+pdfpagecount);
+						Log.e("debug in handler in writebysurfaceview","pagecount is "+pdfpagecount);
 						clearDrawable();
 		            	break;
 		            default:
@@ -1225,7 +1228,7 @@ public class WritebySurfaceView extends Activity implements
 									SimpleDateFormat tempDate = new SimpleDateFormat("yyyyMMddhhmmss"); 
 									String datetime = tempDate.format(new java.util.Date());
 									exportfilename.setHint(classname+datetime);
-//									Log.i("debug in export ","formatgroup is "+formatgroup.toString());
+									Log.e("debug in export ","formatgroup is "+classname+datetime);
 								   formatgroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
 								   {
 
@@ -1424,7 +1427,7 @@ public class WritebySurfaceView extends Activity implements
 				paintstrokesize = (float) (progress * 0.1);
 //				Log.i("DEBUG in onProgressChanged--->",
 //									"paintstrokesize  " + paintstrokesize);
-				textview_paintstrokesizetext.setText(" 粗细 \n    "
+				textview_paintstrokesizetext.setText("粗细 \n    "
 									+ (short) paintstrokesize);
 				}
 		};
@@ -1452,7 +1455,7 @@ public class WritebySurfaceView extends Activity implements
 //								" " + progress);
 				innertextsize = progress;
 				textview_innertextsizetext
-						.setText(" 字大小\n   " + progress);
+						.setText("字号\n   " + progress);
 			}
 		};
 		OnTouchListener upslowbuttonlistener = new OnTouchListener()
@@ -1964,6 +1967,7 @@ public class WritebySurfaceView extends Activity implements
 		/*********************************************************************************/
 
 		// button_autospace.setEnabled(false);
+
 		if (Typeofoper.equals("Edit"))
 		{
 			button_graph.setVisibility(View.VISIBLE);

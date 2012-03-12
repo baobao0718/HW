@@ -664,7 +664,8 @@ public class DocumentDecoder {
 			int red=0;
 			int green=0;
 			int blue=0;
-			int  alpha=0;
+			int alpha=0;
+			
 //			System.err.println("image height : " + height + "  width : "
 //					+ width + "\n");
 //			Log.i("DEBUG--->zhuxiaoqing du","zhuxiaoqing---");
@@ -675,6 +676,9 @@ public class DocumentDecoder {
 			while (true) {
 //				Log.i("DEBUG--->zhuxiaoqing du","zhuxiaoqing");
 				if (startPoint == true) {// 读取笔画的第一点
+					strokeWidth = din.read();//2012.03.09 liqiang
+					if(strokeWidth>20)
+						break;//2012.03.09 liqiang 权宜之计 之后要改，图片笔画宽度之前没有写到文件里，要加上
 					currentByte = din.read();
 //					if ((currentByte & COLOR_MASK) == 0) {
 //						colorFlag = false;
@@ -684,10 +688,10 @@ public class DocumentDecoder {
 //						colorFlag = true;
 //					}
 					
-					//strokeWidth = (currentByte & STROKE_WIDTH_MASK) >> 4;
+//					strokeWidth = (currentByte & STROKE_WIDTH_MASK) >> 4;
 					highX = (currentByte & FIVE_EIGHT_Bit) << 6;
 					
-			//		Log.i("DEBUG--->","STROKEWIDTH  IN Hwtrying memoryCoder.startimageunit"+strokeWidth);
+					Log.e("DEBUG--->","STROKEWIDTH  IN Hwtrying memoryCoder.startimageunit "+strokeWidth);
 					nextByte = din.read();
 
 					temp = (currentByte << 8) | nextByte;
@@ -747,7 +751,9 @@ public class DocumentDecoder {
 //					memoryCoder.addPoint((short) x, (short) y,
 //							(byte) strokeWidth, (byte) colorIndex);
 					memoryCoder.addPoint((short) x, (short) y,
-							(byte) ListTable.characterstrokewidth, (byte) colorIndex);
+							(byte) strokeWidth, (byte) colorIndex);
+//					memoryCoder.addPoint((short) x, (short) y,
+//							(byte) ListTable.characterstrokewidth, (byte) colorIndex);
 					pointX = x;
 					pointY = y;
 					startPoint = false;

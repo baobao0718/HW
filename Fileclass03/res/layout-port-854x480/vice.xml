@@ -123,33 +123,26 @@
     android:layout_marginTop="-6px"
     android:layout_marginLeft="0px"
     />
-	</LinearLayout> 
-     <LinearLayout  
-   	android:layout_width="480px" 
-   	android:layout_height="60px"
-   	android:orientation="horizontal"
-   	android:layout_marginTop="800px"
-   	android:background="#00000000"
-   >
-	<Button 
+    <Button 
     android:id="@+id/doneid"
-		
+	android:background="@drawable/ok"	
     android:layout_width="50px" 
     android:layout_height="50px" 
-    android:layout_marginLeft="370px"
+    android:layout_marginLeft="20px"
   
     
     />
     
     <Button 
     android:id="@+id/autospace"
-			
+	android:background="@drawable/spacectrl"		
     android:layout_width="50px" 
     android:layout_height="50px" 
-    android:layout_marginLeft="0px"
+    android:layout_marginLeft="5px"
    
     />
 	</LinearLayout> 
+
     <RelativeLayout android:id="@+id/AbsoluteLayout003" 
    	android:layout_width="480px" 
    	android:layout_height="854px"
@@ -209,7 +202,7 @@
     android:layout_marginTop="20px"
     android:layout_marginLeft="0px"
     android:visibility="gone"
-    android:text=" 粗细"
+    android:text="粗细"
     android:textColor="#ffff00"
     android:textSize="13dip"
     /> 
@@ -222,7 +215,7 @@
     android:layout_marginLeft="-5px"
     android:visibility="gone"
     android:textColor="#ffff00"
-    android:text=" 字大小"
+    android:text="字号"
     android:textSize="13dip"
     /> 
     

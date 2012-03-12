@@ -317,7 +317,8 @@ public class DocumentCoder implements DataHandler{
 		prePointY =  y;
 		
 		int tempWidth = 0<< 4;
-//		Log.i("DEBUG--->","Stroke width in addPoint  "+width);
+		int strokewidth = (int)width;
+		Log.e("DEBUG--->","Stroke width in addPoint  "+strokewidth);
 /*		boolean colorFlag = true;
 		if (this.color != color) {
 			colorFlag = false;
@@ -334,6 +335,8 @@ public class DocumentCoder implements DataHandler{
 //			firstByte = firstByte | 0x80;
 		int secondByte = lowX | highY;
 		try {
+			outputStream.write(strokewidth);//2012.03.09 liqiang
+			Log.e("DEBUG--->222","Stroke width in addPoint  "+strokewidth);
 			outputStream.write(firstByte);
 			outputStream.write(secondByte);
 			outputStream.write(lowY);
