@@ -61,11 +61,11 @@ public class InkPen {
 	 * @param w：基本宽度
 	 */
 	public void setStrokeWidth(float width) {
-		if (width == strokeWidth)                  //这句是什么意思？？
+		if (width == strokeWidth)                  //传递的width等于成员strokeWidth则返回
 			return;
 		strokeWidth = width;
 		float low = strokeWidth / 2.0f;	
-		upperboundWidth = strokeWidth + 1f;		//这里我改过！！
+		upperboundWidth = strokeWidth + 1f;		//！！
 		lowerboundWidth = low >1.0f ? low - 1.0f : 1.0f;
 	}
 	
@@ -138,64 +138,37 @@ public class InkPen {
 		int size = list.size();
 		if(size>=3)
 		{
-		if (strokeWidth <= strokeWidthThreshole) {
-			for (int i = 0; i < size; ++i) {
-				if(i+2<size)
-				{
-				p1 = list.get(i);
-				p2 = list.get(++i);
-				p3 = list.get(++i);
-				while (true) {
-					modifyStroke(p1, p2, p3);	//调用后，此时，p2的宽度已经确定，顺次下延，让p2变为p1，p3变为p2
-					p1 = p2;                  //后一点的值付给前一点，主要可能是起始点设置的是初始宽度，保持连贯，后面好调用
-					p2 = p3;
-					if(i == size - 1)
-						break;
-					
-					p3 = list.get(++i);
-					if (p3.isEnd() == true) {// p3是结束点的话
-						modifyStroke(p1, p2, p3);
-						p3.setStrokeWidth(strokeWidth);
-						if (i < (size - 1))       	//成立则表明此时，一个字符单元还并未结束，只是一个笔画结束了而已s         
-							i--; 						 //为什么要这么处理？？
-						break;
-					}
-				}
-				}
-			}
-		} else {
-			for (int i = 0; i < size; ++i) {
-				if(i+2<size)
-				{
-				p1 = list.get(i);
-				p2 = list.get(++i);
-				p3 = list.get(++i);
-				while (true) {
-					modifyStroke(p1, p2, p3);
-					p1 = p2;
-					p2 = p3;
-					if(i == size - 1)
-						break;
-					p3 = list.get(++i);
-					if (p3.isEnd() == true&&(i-5)>=0) {// p3是结束点的话
-							p1 = list.get(i - 5);          
+			p1 = list.get(0);
+			p2 = list.get(1);
+			p3 = list.get(2);
+			for (int index = 2; index < size; ) {								//如果index不够p1,p2,p3分配则退出循环
+				modifyStroke(p1, p2, p3);										//处理list中的每个点
+				if(p3.isEnd()){
+					p3.setStrokeWidth(strokeWidth);
+					if(index-5>=0&&strokeWidth > strokeWidthThreshole){			//如果p3前面有五个点则分别调整这5个点的宽度并且strokeWidth > strokeWidthThreshole
+						p1=list.get(index-5);
 						p1.setStrokeWidth(strokeWidth);
-						
 						float dw = (strokeWidth - 2) / stopPointsNum;
-						for (int j = i - 4; j <= i; ++j) {// 根据惯性增加5点
-							p1 = list.get(j - 1);
-							p2 = list.get(j);                       //哪里体现出增加来了？？
-							float width = p1.getStrokeWidth();
-							p2.setStrokeWidth((short)(width - dw));
+						for(int j=index-5; j<index; j++){
+							p2=list.get(j+1);
+							p2.setStrokeWidth((short)(p1.getStrokeWidth() - dw));
+							p1=p2;
 						}
-						if (i < (size - 1))
-							i--;
+					}
+					if(index<size-1){				//如果p3是一个笔画的结束点但不是字符单元的结束点
+						p1=p3;
+						p2=list.get(index+1);
+						p3=list.get(index+2);
+						index+=2;					
+					}else 							//如果p3是字符单元的最后一点则退出循环
 						break;
-					} 
-				}
+				}else {
+					p1=p2;
+					p2=p3;
+					p3=list.get(index+1);
+					index+=1;
 				}
 			}
-		}
 		}
 	}
 	
@@ -210,7 +183,7 @@ public class InkPen {
 
 		double t = ((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
 		
-		if(24000 / (t + 0.1)<1)
+		if(24000 / (t + 0.1)<1)					//距离比较长
 			p1.setStrokeWidth(frontlowerboundWidth);
 		else
 			p1.setStrokeWidth((float) (Math.abs(Math.pow(Math.log(24000 / (t + 0.1)) / 0.31, 0.33)* strokeWidth) / 2));		
@@ -283,8 +256,7 @@ public class InkPen {
 	 		xx = arrayx.get(0);
 	 		yy = arrayy.get(0);
 	 	
-	 		BasePoint inkPenPoint=null;
-	 		inkPenPoint=new BasePoint(xx,yy);
+	 		BasePoint inkPenPoint=new BasePoint(xx,yy);
 	 		inkPenPoint.setEnd(false);
 	 		listinkpen.add(inkPenPoint);
 	 	

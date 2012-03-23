@@ -297,7 +297,7 @@ public class EditDFA {
 				this.imageIndex_1 = this.findOperatorSlideIndex(points, operatorID);
 				if (this.imageIndex_1 == null
 					|| this.imageIndex_1[1] == INVALID_UNIT_INDEX) {
-		//				editPanel.repaint();
+//						editPanel.repaint();
 				} else {
 					this.rightSelectGlobalIndex= this.imageIndex_1[1]-1;	
 					if (this.rightSelectGlobalIndex == INVALID_UNIT_INDEX) {
